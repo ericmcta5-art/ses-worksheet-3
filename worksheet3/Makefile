@@ -51,7 +51,7 @@ CFLAGS  = -O0 -g
 
 FULLASSERT = -DUSE_FULL_ASSERT 
 
-LDFLAGS+= -T$(LDSCRIPT) -mthumb -mcpu=cortex-m3 
+LDFLAGS+= -T$(LDSCRIPT) -mthumb -mcpu=cortex-m3 -nostdlib
 CFLAGS+= -mcpu=cortex-m3 -mthumb 
 CFLAGS+= -I. -I$(DEVICE) -I$(CORE) -I$(PERIPH)/inc -I.
 CFLAGS+= -D$(PTYPE) -DUSE_STDPERIPH_DRIVER $(FULLASSERT)
